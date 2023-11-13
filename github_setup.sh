@@ -12,11 +12,11 @@ apt install xclip -y
 
 # Read the username from the user
 read -p "Enter your username: " username
-echo "Note: This can be changed in future by `git config --global user.name your_name`"
+echo "Note: This can be changed in future by running git config --global user.name your_name"
 
 # Read the email from the user
 read -p "Enter your email: " email
-echo "Note: This can be changed in future by `git config --global user.email your_email`"
+echo "Note: This can be changed in future by running git config --global user.email your_email"
 
 # github default branch name
 echo "Select default git branch from options below"
