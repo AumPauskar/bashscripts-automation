@@ -30,21 +30,23 @@ then
 	if [ $network_choice2 == "y" ]
 	then
 		echo "Whitelisting the site..."
-		echo echo "185.199.108.133 raw.githubusercontent.com" >> /etc/hosts
+		sudo su echo "185.199.108.133 raw.githubusercontent.com" >> /etc/hosts
 		sleep 2
 		echo "Site whitelisted"
 		sleep 2
+	fi
+fi
 
 # updating the system
 echo "Updating the system..."
 sleep 2
-apt update
-apt upgrade -y
+sudo apt update
+sudo apt upgrade -y
 
 # installing zsh
 echo "Installing zsh..."
 sleep 2
-apt install zsh -y
+sudo apt install zsh -y
 
 # checking install
 echo "Checking zsh install..."
