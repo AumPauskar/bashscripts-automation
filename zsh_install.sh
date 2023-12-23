@@ -18,6 +18,23 @@ else
 	exit
 fi
 
+# for the jio users
+echo "Since jio blocks raw.githubusercontent.com, you enter the ip address of the site to continue"
+sleep 2
+echo "This is the bit of code to to whitelist the site: echo '185.199.108.133 raw.githubusercontent.com' >> /etc/hosts"
+sleep 2
+read -p "Do you use jio? (y/n): " network_choice1
+read -p "Do you want to whitelist the site? (y/n): " network_choice2
+if [ $network_choice1 == "y" ]
+then
+	if [ $network_choice2 == "y" ]
+	then
+		echo "Whitelisting the site..."
+		echo echo "185.199.108.133 raw.githubusercontent.com" >> /etc/hosts
+		sleep 2
+		echo "Site whitelisted"
+		sleep 2
+
 # updating the system
 echo "Updating the system..."
 sleep 2
